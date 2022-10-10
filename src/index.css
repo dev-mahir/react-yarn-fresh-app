@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap");
+
+body {
+    font-family: "Quicksand", sans-serif;
+    color: "#808dad";
+}
+
+.__menu_active{
+    position: relative;
+}
+.__menu_active::after {
+    height: 2px;
+    width: 50%;
+    content: "";
+    bottom: -4px;
+    left: 0;
+    position: absolute;
+}
+
+
+.__menu_hover{
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+
+.__menu_hover::after{
+    height: 2px;
+    width: 0%;
+    content: "";
+    bottom: -4px;
+    left: 0;
+    position: absolute;
+    transition: all .3s ease-in-out;
+}
+.__menu_hover:hover::after{
+    width: 50%;
+}
+
+
+.__subtitle{
+    position: relative;
+    transition: all .3s ease-in-out;
+    display: inline-block;
+}
+
+.__subtitle::after{
+    height: 3px;
+    content: "";
+    top: 50%;
+    position: absolute;
+    transition: all .3s ease-in-out;
+}
+
+
+
+
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px !important;
+    font-weight: 900;
+    color:#eb4a4a;
+}
+
+.swiper-button-next,
+ .swiper-button-prev {
+    top: 9%;
+}
+.swiper-button-prev {
+left: 840px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
