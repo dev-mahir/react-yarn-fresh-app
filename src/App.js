@@ -3,18 +3,13 @@ import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   return (
-    <AppRoutes/>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+      </Routes>
+    </>
   );
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
