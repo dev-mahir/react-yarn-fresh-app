@@ -2,87 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
-body {
-    font-family: "Quicksand", sans-serif;
-    color: "#808dad";
+img {
+  width: 100%;
+  height: auto;
 }
 
-.__menu_active{
-    position: relative;
+::-webkit-scrollbar {
+  width: 5px;
 }
-.__menu_active::after {
-    height: 2px;
-    width: 50%;
-    content: "";
-    bottom: -4px;
-    left: 0;
-    position: absolute;
+::-webkit-scrollbar-track {
+  background: #abb7a3;
 }
-
-
-.__menu_hover{
-    position: relative;
-    transition: all .3s ease-in-out;
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(70, 67, 67);
 }
 
-.__menu_hover::after{
-    height: 2px;
-    width: 0%;
-    content: "";
-    bottom: -4px;
-    left: 0;
-    position: absolute;
-    transition: all .3s ease-in-out;
+@layer base {
+  body {
+    @apply text-sm;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-[#000];
+  }
+  h2 {
+    @apply text-[40px] leading-[52px] font-medium;
+  }
+  h4 {
+    @apply text-[17px] font-medium;
+  }
+p{
+    @apply text-[15px] font-normal text-[rgba(0, 0, 0, 0.6)
+];
+
 }
-.__menu_hover:hover::after{
-    width: 50%;
-}
+  input {
+    @apply px-4 py-2 w-full rounded-md outline-none  border focus:border-blue-300 text-gray-500 dark:bg-gray-700 dark:border-gray-500 dark:text-gray-200;
+  }
+  input[type="checkbox"] {
+    @apply inline-block w-auto;
+  }
 
-
-.__subtitle{
-    position: relative;
-    transition: all .3s ease-in-out;
-    display: inline-block;
-}
-
-.__subtitle::after{
-    height: 3px;
-    content: "";
-    top: 50%;
-    position: absolute;
-    transition: all .3s ease-in-out;
-}
-
-
-
-
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-    font-size: 20px !important;
-    font-weight: 900;
-    color:#eb4a4a;
-}
-
-.swiper-button-next,
- .swiper-button-prev {
-    top: 9%;
-}
-.swiper-button-prev {
-left: 840px;
+  textarea {
+    @apply px-4 py-2 w-full rounded-md outline-none  border focus:border-blue-300 text-gray-500 dark:bg-gray-700 dark:border-gray-500 dark:text-gray-200;
+  }
+  select {
+    @apply px-4 py-2 w-full rounded-md outline-none  border focus:border-blue-300 text-gray-500 dark:bg-gray-700 dark:border-gray-500 dark:text-gray-200;
+  }
+  label {
+    @apply block font-medium dark:text-gray-400 mb-1;
+  }
 }
 
+@layer components {
+  .btn {
+    @apply duration-300 border text-[12px] px-3 py-[6px] font-medium rounded-[3px] sm:text-sm sm:px-6;
+  }
+  .btn-icon {
+    @apply flex items-center gap-x-2;
+  }
+
+  .btnicon {
+    @apply px-[6px] py-[6px] rounded-sm;
+  }
+
+  .btn-danger {
+    @apply bg-danger border-danger text-white;
+  }
+  .btn-primary {
+    @apply bg-primary border-primary text-white;
+  }
+
+  .btn-success {
+    @apply bg-success border-success text-white;
+  }
+
+  .btn-outline-danger {
+    @apply text-danger border-danger hover:bg-danger  hover:border-danger hover:text-white;
+  }
+  .btn-outline-primary {
+    @apply text-primary border-primary hover:bg-primary hover:border-primary hover:text-white;
+  }
+  .btn-outline-success {
+    @apply text-success border-success hover:bg-success hover:border-success hover:text-white;
+  }
 
 
 
+  
+  /*==================== custom class ===========================*/
+  .subtitle {
+    @apply text-[22px] font-medium ;
+  }
 
-
-
-
-
-
-
-
-
+}
